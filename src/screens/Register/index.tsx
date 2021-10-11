@@ -41,7 +41,6 @@ const schema = Yup.object().shape({
     .required('O nome é obrigatório'),
 
   amount: Yup
-
     .number()
     .typeError('Informe um valor numérico')
     .positive('O valor não pode ser negativo')
@@ -129,6 +128,7 @@ export function Register() {
   }
 
   return (
+
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
       <Container>
         <Header>
@@ -151,8 +151,7 @@ export function Register() {
               control={control}
               placeholder="Preço"
               keyboardType="numeric"
-              error={errors.amount && errors.amount.message
-              }
+              error={errors.amount && errors.amount.message}
             />
 
             <TransactionsTypes>

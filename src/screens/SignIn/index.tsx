@@ -26,6 +26,8 @@ export function SignIn() {
   const [isLoading, setIsLoading] = useState(false)
   const { signInWithGoogle, signInWithApple } = useAuth();
   const theme = useTheme();
+
+  async function handleSignIn() {}
   
   async function handleSignInWithGoogle() {
 
@@ -80,7 +82,7 @@ export function SignIn() {
           <SignInSocialButton
             title="Entrar com Google"
             svg={GoogleSvg}
-            onPress={handleSignInWithGoogle}
+            onPress={handleSignIn}
           />
           { Platform.OS === 'ios' &&
             <SignInSocialButton
